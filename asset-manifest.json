@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Busan_Goodplace/static/css/main.d956d816.css",
-    "main.js": "/Busan_Goodplace/static/js/main.da4aaa3b.js",
+    "main.css": "/Busan_Goodplace/static/css/main.ff7d1c8b.css",
+    "main.js": "/Busan_Goodplace/static/js/main.9fc1c567.js",
     "index.html": "/Busan_Goodplace/index.html",
-    "main.d956d816.css.map": "/Busan_Goodplace/static/css/main.d956d816.css.map",
-    "main.da4aaa3b.js.map": "/Busan_Goodplace/static/js/main.da4aaa3b.js.map"
+    "main.ff7d1c8b.css.map": "/Busan_Goodplace/static/css/main.ff7d1c8b.css.map",
+    "main.9fc1c567.js.map": "/Busan_Goodplace/static/js/main.9fc1c567.js.map"
   },
   "entrypoints": [
-    "static/css/main.d956d816.css",
-    "static/js/main.da4aaa3b.js"
+    "static/css/main.ff7d1c8b.css",
+    "static/js/main.9fc1c567.js"
   ]
 }
