@@ -52,26 +52,26 @@ const AllLsit = ({ busanFood }) => {
     return (
         <>
             {
-                <>
-                    <div id="map" style={{ height: "500px" }}></div>
+                <div className="wrap">
+                    <div id="map" style={{ height: "100vh" }}></div>
                     <UL>
                         {
                             busanFood.map(it => {
                                 return (
                                     <li key={it.UC_SEQ}>
                                         <Link to={`/store/${it.TITLE}`}>
-                                            <h3>[{it.GUGUN_NM}] {it.TITLE}</h3>
+                                            <h3>[{it.GUGUN_NM}] {it.MAIN_TITLE}</h3>
                                             <figure>
-                                                <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} />
+                                                <img src={it.MAIN_IMG_NORMAL} alt={it.TITLE} className="foodImg" />
                                             </figure>
                                         </Link>
                                     </li>
                                 )
-                            })
+                            }).slice(0, 20)
                         }
                     </UL>
 
-                </>
+                </div>
             }
 
         </>

@@ -35,15 +35,15 @@ const Itm = ({ busanFood }) => {
 
 
     return (
-        <ul>
+        <ul className="secPage">
             {
                 store && <li>
-                    {store.TITLE}
+                    <h2 className="secTitle">{store.TITLE}</h2>
                     <div id="map" style={{ height: "500px" }}></div>
-                    <div>
-                        <h3>{store.TITLE}</h3>
+                    <div className="detailPage">
+                        <h3 className="detailTitle">{store.MAIN_TITLE}</h3>
                         <figure>
-                            <img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} />
+                            <img src={store.MAIN_IMG_NORMAL} alt={store.TITLE} className="foodItm" />
                         </figure>
                     </div>
                 </li>

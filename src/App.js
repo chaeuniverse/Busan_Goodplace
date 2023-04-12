@@ -7,7 +7,10 @@ import AllLsit from "./pages/AllLsit";
 import GuList from "./pages/GuList";
 import Itm from "./pages/Itm";
 
+import SearchList from "./pages/SearchList";
+
 import './styles/style.css';
+import './styles/reset.css';
 
 const App = () => {
     const [busanFood, setBusanFood] = useState([]);
@@ -33,6 +36,7 @@ const App = () => {
                 <Route index element={<AllLsit busanFood={busanFood} />}></Route>
                 <Route path=":id" element={<GuList busanFood={busanFood} />} />
                 <Route path="store/:itm" element={<Itm busanFood={busanFood} />} />
+                <Route path="search" element={<SearchList busanFood={busanFood} />} />
                 {/* {
                     gugun.map((it, idx) => {
                         return <Route path={`${it}`} element={<div>{it}</div>} key={idx}></Route>

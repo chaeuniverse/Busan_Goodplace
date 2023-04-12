@@ -9,7 +9,7 @@ justify-content: center;
 
 const Nav = ({ gugun }) => {
     return (
-        <nav>
+        <nav className="gnb">
             <UL>
                 {
                     gugun.map((it, idx) => <li key={idx}>

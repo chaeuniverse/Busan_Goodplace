@@ -1,23 +1,27 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { UL } from "../styles/style";
 import { useEffect } from "react";
 
-const GuList = ({ busanFood }) => {
-    const { id } = useParams();
-    const guList = busanFood.filter(it => it.GUGUN_NM === id);
+const SearchList = ({ busanFood }) => {
+
+    const [searchParams, setSearchParams] = useSearchParams();
+    const s = searchParams.get('id');
+    const resertList = busanFood.filter(it => it.ITEMCNTNTS.includes(s) || it.TITLE.includes(s))
+    console.log(searchParams, s, resertList)
+
 
     const { kakao } = window;
 
     const KakaoMapScript = () => {
         var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
             mapOption = {
-                center: new kakao.maps.LatLng(guList[0].LAT, guList[0].LNG), // 지도의 중심좌표
+                center: new kakao.maps.LatLng(busanFood[0].LAT, busanFood[0].LNG), // 지도의 중심좌표
                 level: 7 // 지도의 확대 레벨
             };
 
         var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
-        var positions = guList.map(it => {
+        var positions = busanFood.map(it => {
             return {
                 title: it.TITLE,
                 latlng: new kakao.maps.LatLng(it.LAT, it.LNG),
@@ -50,7 +54,7 @@ const GuList = ({ busanFood }) => {
 
     useEffect(() => {
         busanFood.length > 0 && KakaoMapScript();
-    }, [busanFood, id])
+    }, [busanFood])
 
 
     return (
@@ -58,7 +62,7 @@ const GuList = ({ busanFood }) => {
             <div id="map" style={{ height: "500px" }}></div>
             <UL>
                 {
-                    guList.map(it => {
+                    resertList.map(it => {
                         return (
                             <li key={it.UC_SEQ}>
                                 <Link to={`/store/${it.TITLE}`}>
@@ -76,4 +80,4 @@ const GuList = ({ busanFood }) => {
     )
 }
 
-export default GuList;
+export default SearchList;

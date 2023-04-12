@@ -1,0 +1,40 @@
+/* 웹 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+/* 아이콘 */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+    color: #444444;
+}
+/* 기본적인 초기 값 설정 */
+
+ul,
+ol {
+    list-style: none;
+    text-transform: none;
+}
+/* 리스트의 동그라미와 숫자를 모두 제거 */
+
+a {
+    text-decoration: none;
+}
+/* 글자의 밑줄 제거 */
+
+img {
+    vertical-align: middle;
+}
+/* 이미지를 넣었을 때 공간을 제거 */
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 1;
+    letter-spacing: -0.025em;
+}
+/* 폰트 모두 noto sans로 지정 */
+/* 1을 주는 것은 글자 위 아래 간격을 없앤 딱 글자 크기만큼 설정 */
+/* 마지막은 글자 자간을 적당히 줄이는 것 */

@@ -5,6 +5,7 @@ const Layout = ({ gugun }) => {
     return (
         <>
             <Header gugun={gugun} />
+
             <Outlet />
         </>
     )
